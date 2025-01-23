@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/check_value.dir/random_value.cpp.o CMakeFiles/check_value.dir/user_interface.cpp.o CMakeFiles/check_value.dir/check_value.cpp.o CMakeFiles/check_value.dir/high_scores.cpp.o -o check_value 

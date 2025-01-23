@@ -117,37 +117,52 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named check_value
+# Target rules for targets named main_basic
 
 # Build rule for target.
-check_value: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 check_value
-.PHONY : check_value
+main_basic: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main_basic
+.PHONY : main_basic
 
 # fast build rule for target.
-check_value/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/check_value.dir/build.make CMakeFiles/check_value.dir/build
-.PHONY : check_value/fast
+main_basic/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_basic.dir/build.make CMakeFiles/main_basic.dir/build
+.PHONY : main_basic/fast
 
 #=============================================================================
-# Target rules for targets named argument
+# Target rules for targets named main_print_only_max
 
 # Build rule for target.
-argument: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 argument
-.PHONY : argument
+main_print_only_max: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main_print_only_max
+.PHONY : main_print_only_max
 
 # fast build rule for target.
-argument/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/argument.dir/build.make CMakeFiles/argument.dir/build
-.PHONY : argument/fast
+main_print_only_max/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_print_only_max.dir/build.make CMakeFiles/main_print_only_max.dir/build
+.PHONY : main_print_only_max/fast
+
+#=============================================================================
+# Target rules for targets named main_save_only_max
+
+# Build rule for target.
+main_save_only_max: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main_save_only_max
+.PHONY : main_save_only_max
+
+# fast build rule for target.
+main_save_only_max/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_save_only_max.dir/build.make CMakeFiles/main_save_only_max.dir/build
+.PHONY : main_save_only_max/fast
 
 argument.o: argument.cpp.o
 .PHONY : argument.o
 
 # target to build an object file
 argument.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/argument.dir/build.make CMakeFiles/argument.dir/argument.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_basic.dir/build.make CMakeFiles/main_basic.dir/argument.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_print_only_max.dir/build.make CMakeFiles/main_print_only_max.dir/argument.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_save_only_max.dir/build.make CMakeFiles/main_save_only_max.dir/argument.cpp.o
 .PHONY : argument.cpp.o
 
 argument.i: argument.cpp.i
@@ -155,7 +170,9 @@ argument.i: argument.cpp.i
 
 # target to preprocess a source file
 argument.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/argument.dir/build.make CMakeFiles/argument.dir/argument.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_basic.dir/build.make CMakeFiles/main_basic.dir/argument.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_print_only_max.dir/build.make CMakeFiles/main_print_only_max.dir/argument.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_save_only_max.dir/build.make CMakeFiles/main_save_only_max.dir/argument.cpp.i
 .PHONY : argument.cpp.i
 
 argument.s: argument.cpp.s
@@ -163,39 +180,19 @@ argument.s: argument.cpp.s
 
 # target to generate assembly for a file
 argument.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/argument.dir/build.make CMakeFiles/argument.dir/argument.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_basic.dir/build.make CMakeFiles/main_basic.dir/argument.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_print_only_max.dir/build.make CMakeFiles/main_print_only_max.dir/argument.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_save_only_max.dir/build.make CMakeFiles/main_save_only_max.dir/argument.cpp.s
 .PHONY : argument.cpp.s
-
-check_value.o: check_value.cpp.o
-.PHONY : check_value.o
-
-# target to build an object file
-check_value.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/check_value.dir/build.make CMakeFiles/check_value.dir/check_value.cpp.o
-.PHONY : check_value.cpp.o
-
-check_value.i: check_value.cpp.i
-.PHONY : check_value.i
-
-# target to preprocess a source file
-check_value.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/check_value.dir/build.make CMakeFiles/check_value.dir/check_value.cpp.i
-.PHONY : check_value.cpp.i
-
-check_value.s: check_value.cpp.s
-.PHONY : check_value.s
-
-# target to generate assembly for a file
-check_value.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/check_value.dir/build.make CMakeFiles/check_value.dir/check_value.cpp.s
-.PHONY : check_value.cpp.s
 
 high_scores.o: high_scores.cpp.o
 .PHONY : high_scores.o
 
 # target to build an object file
 high_scores.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/check_value.dir/build.make CMakeFiles/check_value.dir/high_scores.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_basic.dir/build.make CMakeFiles/main_basic.dir/high_scores.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_print_only_max.dir/build.make CMakeFiles/main_print_only_max.dir/high_scores.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_save_only_max.dir/build.make CMakeFiles/main_save_only_max.dir/high_scores.cpp.o
 .PHONY : high_scores.cpp.o
 
 high_scores.i: high_scores.cpp.i
@@ -203,7 +200,9 @@ high_scores.i: high_scores.cpp.i
 
 # target to preprocess a source file
 high_scores.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/check_value.dir/build.make CMakeFiles/check_value.dir/high_scores.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_basic.dir/build.make CMakeFiles/main_basic.dir/high_scores.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_print_only_max.dir/build.make CMakeFiles/main_print_only_max.dir/high_scores.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_save_only_max.dir/build.make CMakeFiles/main_save_only_max.dir/high_scores.cpp.i
 .PHONY : high_scores.cpp.i
 
 high_scores.s: high_scores.cpp.s
@@ -211,15 +210,91 @@ high_scores.s: high_scores.cpp.s
 
 # target to generate assembly for a file
 high_scores.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/check_value.dir/build.make CMakeFiles/check_value.dir/high_scores.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_basic.dir/build.make CMakeFiles/main_basic.dir/high_scores.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_print_only_max.dir/build.make CMakeFiles/main_print_only_max.dir/high_scores.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_save_only_max.dir/build.make CMakeFiles/main_save_only_max.dir/high_scores.cpp.s
 .PHONY : high_scores.cpp.s
+
+main_basic.o: main_basic.cpp.o
+.PHONY : main_basic.o
+
+# target to build an object file
+main_basic.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_basic.dir/build.make CMakeFiles/main_basic.dir/main_basic.cpp.o
+.PHONY : main_basic.cpp.o
+
+main_basic.i: main_basic.cpp.i
+.PHONY : main_basic.i
+
+# target to preprocess a source file
+main_basic.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_basic.dir/build.make CMakeFiles/main_basic.dir/main_basic.cpp.i
+.PHONY : main_basic.cpp.i
+
+main_basic.s: main_basic.cpp.s
+.PHONY : main_basic.s
+
+# target to generate assembly for a file
+main_basic.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_basic.dir/build.make CMakeFiles/main_basic.dir/main_basic.cpp.s
+.PHONY : main_basic.cpp.s
+
+main_print_only_max.o: main_print_only_max.cpp.o
+.PHONY : main_print_only_max.o
+
+# target to build an object file
+main_print_only_max.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_print_only_max.dir/build.make CMakeFiles/main_print_only_max.dir/main_print_only_max.cpp.o
+.PHONY : main_print_only_max.cpp.o
+
+main_print_only_max.i: main_print_only_max.cpp.i
+.PHONY : main_print_only_max.i
+
+# target to preprocess a source file
+main_print_only_max.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_print_only_max.dir/build.make CMakeFiles/main_print_only_max.dir/main_print_only_max.cpp.i
+.PHONY : main_print_only_max.cpp.i
+
+main_print_only_max.s: main_print_only_max.cpp.s
+.PHONY : main_print_only_max.s
+
+# target to generate assembly for a file
+main_print_only_max.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_print_only_max.dir/build.make CMakeFiles/main_print_only_max.dir/main_print_only_max.cpp.s
+.PHONY : main_print_only_max.cpp.s
+
+main_save_only_max.o: main_save_only_max.cpp.o
+.PHONY : main_save_only_max.o
+
+# target to build an object file
+main_save_only_max.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_save_only_max.dir/build.make CMakeFiles/main_save_only_max.dir/main_save_only_max.cpp.o
+.PHONY : main_save_only_max.cpp.o
+
+main_save_only_max.i: main_save_only_max.cpp.i
+.PHONY : main_save_only_max.i
+
+# target to preprocess a source file
+main_save_only_max.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_save_only_max.dir/build.make CMakeFiles/main_save_only_max.dir/main_save_only_max.cpp.i
+.PHONY : main_save_only_max.cpp.i
+
+main_save_only_max.s: main_save_only_max.cpp.s
+.PHONY : main_save_only_max.s
+
+# target to generate assembly for a file
+main_save_only_max.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_save_only_max.dir/build.make CMakeFiles/main_save_only_max.dir/main_save_only_max.cpp.s
+.PHONY : main_save_only_max.cpp.s
 
 random_value.o: random_value.cpp.o
 .PHONY : random_value.o
 
 # target to build an object file
 random_value.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/check_value.dir/build.make CMakeFiles/check_value.dir/random_value.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_basic.dir/build.make CMakeFiles/main_basic.dir/random_value.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_print_only_max.dir/build.make CMakeFiles/main_print_only_max.dir/random_value.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_save_only_max.dir/build.make CMakeFiles/main_save_only_max.dir/random_value.cpp.o
 .PHONY : random_value.cpp.o
 
 random_value.i: random_value.cpp.i
@@ -227,7 +302,9 @@ random_value.i: random_value.cpp.i
 
 # target to preprocess a source file
 random_value.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/check_value.dir/build.make CMakeFiles/check_value.dir/random_value.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_basic.dir/build.make CMakeFiles/main_basic.dir/random_value.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_print_only_max.dir/build.make CMakeFiles/main_print_only_max.dir/random_value.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_save_only_max.dir/build.make CMakeFiles/main_save_only_max.dir/random_value.cpp.i
 .PHONY : random_value.cpp.i
 
 random_value.s: random_value.cpp.s
@@ -235,7 +312,9 @@ random_value.s: random_value.cpp.s
 
 # target to generate assembly for a file
 random_value.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/check_value.dir/build.make CMakeFiles/check_value.dir/random_value.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_basic.dir/build.make CMakeFiles/main_basic.dir/random_value.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_print_only_max.dir/build.make CMakeFiles/main_print_only_max.dir/random_value.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_save_only_max.dir/build.make CMakeFiles/main_save_only_max.dir/random_value.cpp.s
 .PHONY : random_value.cpp.s
 
 user_interface.o: user_interface.cpp.o
@@ -243,7 +322,9 @@ user_interface.o: user_interface.cpp.o
 
 # target to build an object file
 user_interface.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/check_value.dir/build.make CMakeFiles/check_value.dir/user_interface.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_basic.dir/build.make CMakeFiles/main_basic.dir/user_interface.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_print_only_max.dir/build.make CMakeFiles/main_print_only_max.dir/user_interface.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_save_only_max.dir/build.make CMakeFiles/main_save_only_max.dir/user_interface.cpp.o
 .PHONY : user_interface.cpp.o
 
 user_interface.i: user_interface.cpp.i
@@ -251,7 +332,9 @@ user_interface.i: user_interface.cpp.i
 
 # target to preprocess a source file
 user_interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/check_value.dir/build.make CMakeFiles/check_value.dir/user_interface.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_basic.dir/build.make CMakeFiles/main_basic.dir/user_interface.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_print_only_max.dir/build.make CMakeFiles/main_print_only_max.dir/user_interface.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_save_only_max.dir/build.make CMakeFiles/main_save_only_max.dir/user_interface.cpp.i
 .PHONY : user_interface.cpp.i
 
 user_interface.s: user_interface.cpp.s
@@ -259,7 +342,9 @@ user_interface.s: user_interface.cpp.s
 
 # target to generate assembly for a file
 user_interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/check_value.dir/build.make CMakeFiles/check_value.dir/user_interface.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_basic.dir/build.make CMakeFiles/main_basic.dir/user_interface.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_print_only_max.dir/build.make CMakeFiles/main_print_only_max.dir/user_interface.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_save_only_max.dir/build.make CMakeFiles/main_save_only_max.dir/user_interface.cpp.s
 .PHONY : user_interface.cpp.s
 
 # Help Target
@@ -270,17 +355,24 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... argument"
-	@echo "... check_value"
+	@echo "... main_basic"
+	@echo "... main_print_only_max"
+	@echo "... main_save_only_max"
 	@echo "... argument.o"
 	@echo "... argument.i"
 	@echo "... argument.s"
-	@echo "... check_value.o"
-	@echo "... check_value.i"
-	@echo "... check_value.s"
 	@echo "... high_scores.o"
 	@echo "... high_scores.i"
 	@echo "... high_scores.s"
+	@echo "... main_basic.o"
+	@echo "... main_basic.i"
+	@echo "... main_basic.s"
+	@echo "... main_print_only_max.o"
+	@echo "... main_print_only_max.i"
+	@echo "... main_print_only_max.s"
+	@echo "... main_save_only_max.o"
+	@echo "... main_save_only_max.i"
+	@echo "... main_save_only_max.s"
 	@echo "... random_value.o"
 	@echo "... random_value.i"
 	@echo "... random_value.s"

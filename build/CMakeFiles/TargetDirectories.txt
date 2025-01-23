@@ -1,4 +1,5 @@
-/home/palina/otus/cxx-basic/HW3/build/CMakeFiles/check_value.dir
-/home/palina/otus/cxx-basic/HW3/build/CMakeFiles/argument.dir
+/home/palina/otus/cxx-basic/HW3/build/CMakeFiles/main_basic.dir
+/home/palina/otus/cxx-basic/HW3/build/CMakeFiles/main_print_only_max.dir
+/home/palina/otus/cxx-basic/HW3/build/CMakeFiles/main_save_only_max.dir
 /home/palina/otus/cxx-basic/HW3/build/CMakeFiles/edit_cache.dir
 /home/palina/otus/cxx-basic/HW3/build/CMakeFiles/rebuild_cache.dir
